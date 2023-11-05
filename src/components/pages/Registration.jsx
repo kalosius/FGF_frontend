@@ -39,7 +39,7 @@ export const Register = (props) => {
   return (
     <div className="square-block">
       <div className="main-container">
-        <div className="login-side-list">
+        <div className="register-side-list">
           <div className="line-breaks">
             <h1>Help us Grow</h1>
             <h1>
@@ -52,7 +52,7 @@ export const Register = (props) => {
             <h2>
               Register{" "}
               <span>
-                <img className="login-logo" src="imgs/login/fgfoundation_logo.png" alt="" />
+                <img className="register-logo" src="imgs/login/fgfoundation_logo.png" alt="" />
               </span>
             </h2>
             <div>

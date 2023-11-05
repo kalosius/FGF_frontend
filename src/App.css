@@ -1,3 +1,4 @@
+/* Default styles for all screen sizes */
 .App {
   text-align: center;
   display: flex;
@@ -6,87 +7,103 @@
   justify-content: center;
   color: white;
   background-image: linear-gradient(79deg, #2c5c37, #2b5a34, #2b5a36);
+}
+
+/* Center the main container */
+.main-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow contents to wrap to the next line on smaller screens */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Common styles for both login and register containers */
+.auth-form-container {
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #2c5c37;
+  background-color: #fff;
+  max-width: 400px;
   
 }
 
-
-/* login-interface */
-.main-container{
-  display: flex;
- 
+/* Responsive media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .auth-form-container {
+    max-width: 90%;
+  }
+  .square-block {
+    height: auto;
+    padding-top: 0;
+    margin: 20px;
+  }
+  .line-breaks {
+    margin: 0 20px;
+    padding: 0 20px;
+    font-size: 30px;
+  }
 }
 
-.auth-form-container{
+
+/* Example: Adjusting button padding for smaller screens */
+button {
+  background-color: #2b5a34;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button img.register {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Register-side styles */
+.register-side-list{
+  background-color: #2b5a36;
+  width: 300px;
+  height: 670px;
+  padding: 80px;
+  padding-top: 100px;
+  font-size: xx-large;
+  
+}
+
+/* Login-side styles */
+.login-side-list {
+  background-color: #2b5a36;
+  width: 300px;
+  height: 725px;
+  padding: 100px;
+  padding-top: 80px;
+  font-size: xx-large
+}
+
+/* Register-side styles */
+.square-block {
+  
+  background-color: #4a844a;
+
+}
+
+.login-button {
+  padding-left: 159px !important;
+  border: 1px solid #2b5a36;
+  background-color: #2b5a36;
+}
+
+.register {
   border-radius: 0px !important;
 }
 
-.auth-form-container,  .login-side-list{
-  flex: 0.5; /* Distributes the available space equally */
-  padding: 10px;
-  border: 1px solid #000;
-  background-color: #2b5a36;
-
-}
-
-.side-log-message{
-  color: #00ff00;
-  font-size: 50px;
-  font-family: "'Courier New', Courier, monospace'";
-}
-
-.line-breaks{
-  margin: 0 150px;
-  color: #00ff00;
-  font-size: 50px;
-  font-family: "'Courier New', Courier, monospace'";
-  margin: 0 20px;
-  padding: 0 50px;
-}
-
-.most-out-block{
-  margin: 20px;
-}
-
-.login-button{
-  padding-left:  232px !important;
-  border: 1px solid #2b5a36;
-  background-color: #2b5a36; 
-}
-
-/* login interface stops here */
-
-/* Register starts here */
-.register{
-  border-radius: 0px !important
-}
-
-/* This also affects the login page */
-.square-block {
-  width: stretch; /* Adjust the width to your desired size */
-  height: stretch; /* Make it a square by setting the same height as the width */
-  padding: 10px;
-  background-color: #4a844a;; /* Set a background color or use an image */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#reg-side{
+#reg-side {
   font-size: 0 10px;
-}
-
-
-/* Register stops Here */
-
-/* form border  */
-@media screen and (min-width:600px) {
-  .auth-form-container {
-    padding: 5rem;
-    border: 1px solid #2c5c37;
-    border-radius: 10px;
-    margin: 0.5rem;
-}
-
 }
 
 input {
@@ -97,169 +114,165 @@ input {
   margin: 5px;
 }
 
+
 .link-btn {
-  background: none ;
+  background: none;
   color: whitesmoke;
   text-decoration: underline;
+}
 
+h2 span {
+  display: inline-block;
+  vertical-align: middle; /* Adjust as needed for vertical alignment */
+  margin-left: 10px; /* Add margin for spacing between text and image */
 }
 
 
-h2 span {
-display: inline-block;
-vertical-align: middle; /* Adjust as needed for vertical alignment */
-margin-left: 10px; /* Add margin for spacing between text and image */
+/* All Logos */
+.register-logo{
+  width: 100px;
+  height: 80px;
+  margin: 0 100px;
 }
 
 .login-logo {
-width: 100px;
-height: 50px;
-margin: 0 180px;
-/* Additional styling for the image */
+  width: 100px;
+  height: 50px;
+  margin: 0 135px;
+  /* Additional styling for the image */
 }
 
-
-
 .auth-form-Container.register {
-max-width: 400px;
-margin: 0 auto;
-padding: 20px;
-border: 1px solid #ccc;
-border-radius: 5px;
-background-color: #fff;
-text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
 }
 
 h2 {
-font-size: 24px;
-margin: 0;
-color: #2b5a34 !important;
-font-weight: bolder !important;
-font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin: 0;
+  color: #2b5a34 !important;
+  font-weight: bolder !important;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
-background-color: #2b5a34;
-color: #fff;
-border: none;
-border-radius: 5px;
-padding: 10px 20px;
-margin: 10px 0;
-cursor: pointer;
-display: flex;
-align-items: center;
-}
-
-button img.register {
-width: 20px;
-height: 20px;
-margin-right: 10px;
+  background-color: #2b5a34;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .register-form {
-text-align: left;
-margin: 20px 0;
+  text-align: left;
+  margin: 20px 0;
 }
 
 label {
-display: block;
-margin: 10px 0px;
-
+  display: block;
+  margin: 10px 0px;
 }
 
 input::placeholder {
-text-align: left; /* Adjust text alignment */
-position: relative; /* Use relative positioning */
-top: 0px; /* Adjust the vertical position */
-left: 10px;
-color: #2b5a36;
+  text-align: left; /* Adjust text alignment */
+  position: relative; /* Use relative positioning */
+  top: 0px; /* Adjust the vertical position */
+  left: 10px;
+  color: #2b5a36;
 }
 
 button[type="submit"] {
-background-color: #2b5a34;
-color: #fff;
-padding: 8px 150px;
-margin: 10px 0px;
-
-
-
+  background-color: #2b5a34;
+  color: #fff;
+  padding: 8px 150px;
+  margin: 10px 0px;
 }
 
 .link-btn {
-background-color: #fff;
-color: #2b5a34;
-border: none;
-padding: 10px 20px;
-border-radius: 5px;
-text-decoration: none;
-display: inline-block;
-cursor: pointer;
-margin-top: 10px;
+  background-color: #fff;
+  color: #2b5a34;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
+/* .side-log-message{
+    color: #00ff00;
+    font-size: 50px;
+    font-family: "'Courier New', Courier, monospace'";
+  } */
+
+.line-breaks {
+  color: #00ff00;
+  font-family: "'Courier New', Courier, monospace'";
+}
 
 /* .......Specifically_LOGIN......... */
 /* Login Component Css */
 
 .auth-form-container.login {
-/* max-width: 400px; */
-margin: 0 auto;
-/* padding: 20px; */
-background: #fff;
-border: 1px solid #2b5a36;
-border-radius: 5px;
-text-align: center;
+  max-width: 400px;
+  /* margin:  auto; */
+  /* padding: 20px; */
+  background: #fff;
+  border: 1px solid #2b5a36;
+  border-radius: 5px;
+  text-align: center;
 }
 
 h2 {
-font-size: 24px;
-margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 h1 {
-font-size: 18px;
-margin: 20px 0;
-}
-
-button {
-border: none;
-background: transparent;
-cursor: pointer;
+  font-size: 18px;
+  margin: 20px 0;
 }
 
 button img.login {
-width: 100px;
-height: 50px;
-margin-left: 130px;
-
+  width: 100px;
+  height: 50px;
+  margin-left: 130px;
 }
 
 form.login-form {
-text-align: left;
-margin: 10px 0;
+  text-align: left;
+  margin: 10px 0;
 }
-
-
 
 /* all underlined links */
-.underlog-links{
-text-decoration: underline;
-padding: 0 100px;
+.underlog-links {
+  text-decoration: underline;
+  padding: 0 100px;
 }
 
-.undereg-links{
-text-decoration: underline;
-padding: 0 10px;
+.undereg-links {
+  text-decoration: underline;
+  padding: 0 10px;
 }
 
 /* anchor tag for both login and registration */
-a{
-margin-left: 30px; 
+a {
+  margin-left: 30px;
 }
 
 /* Login logo bottom */
-.llogin{
-margin: 65px 120px;
-width: 100px;
-height: 100px;
+.llogin {
+  margin: 65px 120px;
+  width: 100px;
+  height: 100px;
 }
