@@ -100,6 +100,7 @@ button img.register {
 
 .register {
   border-radius: 0px !important;
+  margin: 0 85px;
 }
 
 #reg-side {
