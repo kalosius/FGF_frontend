@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import '../../App.css';
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, TextInput, Text, Group, Box } from "@mantine/core";
+
 
 export const Login = (props) => {
   const [formData, setFormData] = useState({
