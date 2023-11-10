@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Button, TextInput, Text, Title, Container, Group, FileInput, Grid } from "@mantine/core";
-import { Layout } from "../../Layout"
+import { Button, TextInput, Text, Title, Group, FileInput, Grid } from "@mantine/core";
+import { Layout } from "../Layout"
 
 import './Culture.css'
 
@@ -36,10 +36,10 @@ export default function CreateKingdom () {
     useEffect(() => {
         axios.get(url)  
           .then((response) => {
-            setPosts(response.data);
+            setPlants(response.data);
           })
           .catch((error) => {
-            console.error(error);
+            console.err(err);
           });
       }, []);
 
@@ -80,7 +80,7 @@ export default function CreateKingdom () {
             navigate("/CreateEthnicity");
         })
           
-          .catch((error) => console.log(error));
+          .catch((err) => console.log(err));
           
     };
 
@@ -88,18 +88,12 @@ export default function CreateKingdom () {
 
   return (
     <Layout>
-        <Container className='container' id="form_title">
-            <Title order={3}> ADD NEW CULTURE</Title> 
-        </Container> 
-        <Container className='container' container-fluid='true' shadow="sm" id="form">
-         
+        
+        <Title order={3} ta="center"> CULTURE</Title>
+        
+        <Grid columns={24}>
+            <Grid.Col span={22}>  
                 <form onSubmit={handleSubmit}>
-                <div id="sub_tile_no_spc" style={{ display: 'flex', alignItems: 'center' }}>
-                    <div className="font-bold w-8 h-8 rounded-full overflow-hidden bg-[#C1BCCD] text-[#fff] flex justify-center items-center">
-                        2.
-                    </div>
-                    <span style={{ whiteSpace: 'nowrap' }}> Add Kingdom Details </span> 
-                </div>
                     <div>
                         <TextInput
                         label="Kingdom Name"
@@ -173,7 +167,8 @@ export default function CreateKingdom () {
                     </Text> 
                     {/* <Popup message={successMessage} onClose={() => setSuccessMessage(null)} /> */}
 
-            </Container>
+                </Grid.Col>
+            </Grid>
       
     </Layout>
     
